@@ -46,11 +46,13 @@ with col2:
 # separacion
 st.write("---")
 
-final_sample, non_risk_sample = ut.risk_nonrisk_sample(
+final_sample, non_risk_sample, pulse_id, tries = ut.risk_nonrisk_sample(
     riesgosos_df.to_list(), no_riesgosos_df.to_list(), 10
 )
 
-asignaciones = ut.run_association(final_sample, fiscalizadores_id, n=2)
+asignaciones, pulse_id2, tries2 = ut.run_association(
+    final_sample, fiscalizadores_id, n=2
+)
 
 asignaciones_df = pd.DataFrame(
     asignaciones.items(), columns=["Fiscalizador", "Contenedores"]
@@ -59,3 +61,25 @@ asignaciones_df = pd.DataFrame(
 st.write("### Asignaciones aleatorias y verificables")
 
 st.data_editor(asignaciones_df, use_container_width=True, hide_index=True)
+
+st.write("### Verificación de asignaciones")
+
+verificacion_drand = {
+    "Proveedor": "Drand",
+    "Uso": "Toma de sample de containers riesgosos y no riesgosos",
+    "Pulse ID": pulse_id,
+    "Tries": tries,
+}
+
+verificaion_ruchile = {
+    "Proveedor": "Ruchile",
+    "Uso": "Asignación de containers a fiscalizadores",
+    "Pulse ID": pulse_id2,
+    "Tries": tries2,
+}
+
+st.data_editor(
+    pd.DataFrame([verificacion_drand, verificaion_ruchile]),
+    use_container_width=True,
+    hide_index=True,
+)

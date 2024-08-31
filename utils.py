@@ -70,16 +70,21 @@ def risk_nonrisk_sample(risk, non_risk, n):
 
     # Seed
     random.seed(seed)
+    
+    # Tries
+    tries = 0
 
     # Si hay más riesgosos que la capacidad de revisión, se toma una muestra de riesgosos
     # Si no, se toma la lista completa
     if len(risk) >= int(n * 0.9):
         risk_sample = random.sample(risk, int(n * 0.9))
+        tries += 1
     else:
         risk_sample = risk
 
     non_risk_sample = non_risk.copy()
     random.shuffle(non_risk_sample)
+    tries += 1
     non_risk_sample = non_risk_sample[: n - len(risk_sample)]
 
     # Asociación final
@@ -90,7 +95,7 @@ def risk_nonrisk_sample(risk, non_risk, n):
     print("Riesgosos: {}".format(risk_sample))
     print("No riesgosos: {}".format(non_risk_sample))
     print("Muestra final: {}".format(final_sample))
-    return final_sample, non_risk_sample
+    return final_sample, non_risk_sample, pulse_index, tries
 
 
 # Función para asociar inspectores con contenedores
@@ -106,9 +111,14 @@ def run_association(C, I, n=5):
 
     # Seed
     random.seed(seed)
+    
+    # Tries
+    tries = 0
 
     random.shuffle(I)
+    tries += 1
     random.shuffle(C)
+    tries += 1
 
     # Asociación Inspector - Contenedores
     association = {}
@@ -116,6 +126,7 @@ def run_association(C, I, n=5):
     subC = C.copy()
     for inspector in I:
         sample = random.sample(subC, n)
+        tries += 1
         for x in sample:
             subC.remove(x)
         # print(subN)
@@ -125,7 +136,7 @@ def run_association(C, I, n=5):
     print("Seed: {}".format(seed))
     pprint.pprint(association)
     # print(association.values())
-    return association
+    return association, pulse_index, tries
 
 
 def test_run_association():
