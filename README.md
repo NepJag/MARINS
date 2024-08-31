@@ -2,7 +2,7 @@
 
 Esta herramienta fue diseñada para ayudar a realizar inspecciones aleatorias en barcos de carga.
 
-El foco de este proyecto es apoyar a realizar inspecciones de containers traidos por barcos de carga, de forma más fiabe.
+El foco de este proyecto es apoyar a realizar inspecciones de containers traidos por barcos de carga, de forma más fiable.
 
 La idea es que luego de la evaluación de riesgo, se toma un subconjunto aleatorio de los containers riesgosos para inspeccionarlos. Además, se toma un subconjunto pequeño y aleatorio de los containers no riesgosos para inspeccionar, y así verificar la efectividad del modelo de evaluación de riesgo.
 
