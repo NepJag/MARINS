@@ -1,0 +1,16 @@
+ID Carga,Número de Manifiesto,Fecha,Puerto de Carga,Puerto de Descarga,Nombre del Barco,Número de Contenedor,Tipo de Carga,Peso (kg),Cantidad de Paquetes,Nombre del Exportador,Nombre del Importador,Riesgo de Materiales Ilicitos
+1,M0001,2024-08-30,Valparaíso,Antofagasta,MS Chile 1,CTN123456,Electrodomésticos,15000,100,ElectroChile,Suministros SA,0.1
+2,M0002,2024-08-30,San Antonio,Iquique,MS Chile 2,CTN123457,Textiles,8000,200,Fabricas Textiles,Iquique Ropa Ltda,0.8
+3,M0003,2024-08-30,Valparaíso,Coquimbo,MS Chile 3,CTN123458,Alimentos,12000,300,Alimentos Del Sur,Distribuciones Norte,0.3
+4,M0004,2024-08-31,San Antonio,Antofagasta,MS Chile 4,CTN123459,Electrodomésticos,16000,150,ElectroChile,Suministros SA,0.2
+5,M0005,2024-08-31,Valparaíso,Arica,MS Chile 5,CTN123460,Maquinaria,22000,50,Maquinas Chile,Arica Construcciones,0.5
+6,M0006,2024-09-01,Valparaíso,Punta Arenas,MS Andes 1,CTN123461,Electrodomésticos,17500,120,ElectroChile,Patagonia Distribuciones,0.2
+7,M0007,2024-09-01,San Antonio,Valparaíso,MS Andes 2,CTN123462,Químicos,5000,60,Quimica Ltda,Industria Química SA,0.9
+8,M0008,2024-09-02,Antofagasta,San Antonio,MS Pacifico 1,CTN123463,Automóviles,25000,20,AutoChile,Transporte Automotriz,0.7
+9,M0009,2024-09-02,Coquimbo,Valparaíso,MS Pacifico 2,CTN123464,Alimentos,9500,250,Delicias del Sur,Suministros Alimenticios,0.4
+10,M0010,2024-09-03,Arica,San Antonio,MS Patagonia 1,CTN123465,Maquinaria,21000,40,Maquinas del Norte,Construcción y Equipos,0.96
+11,M0011,2024-09-03,Valparaíso,San Antonio,MS Andes 3,CTN123466,Textiles,10000,180,TextilChile,Distribuciones Ropa Ltda,0.82
+12,M0012,2024-09-04,San Antonio,Coquimbo,MS Andes 4,CTN123467,Electrodomésticos,16000,110,ElectroChile,Suministros SA,0.92
+13,M0013,2024-09-04,Valparaíso,Arica,MS Pacifico 3,CTN123468,Químicos,7000,50,Quimica Ltda,Industria Química SA,0.99
+14,M0014,2024-09-05,Antofagasta,San Antonio,MS Patagonia 2,CTN123469,Automóviles,23000,25,AutoChile,Transporte Automotriz,0.75
+15,M0015,2024-09-05,San Antonio,Valparaíso,MS Andes 5,CTN123470,Alimentos,11000,280,Delicias del Sur,Suministros Alimenticios,0.6
